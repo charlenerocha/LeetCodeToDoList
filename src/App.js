@@ -26,13 +26,23 @@ class App extends Component{
             <input
               class="text"
               type="text"
+              value="question"
               placeholder="Type your question here..."
             />
 
             <button
               class="text"
               type="text"
-            >Add</button>
+              onclick="myFunction()"
+            >Add..</button>
+
+            {/* <script>
+            document.getElementById("text").onclick = function() {myFunction()};
+
+            function myFunction() {
+              document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+            }
+            </script> */}
 
           </div>
 
