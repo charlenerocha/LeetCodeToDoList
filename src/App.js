@@ -14,8 +14,8 @@ class App extends Component{
 
   render(){
     return(
-      <div className="App">
-        <div className='Title'>
+      <div class="app">
+        <div class='title'>
           <h1>LeetCode To-Do List</h1>
         </div>
         
@@ -26,7 +26,7 @@ class App extends Component{
             <input
               class="text"
               type="text"
-              value="question"
+              size="30"
               placeholder="Type your question here..."
             />
 
@@ -47,7 +47,7 @@ class App extends Component{
           </div>
 
           <div class="sub_column"></div>
-{/* test */}
+
         </div>
       </div>  
     )
