@@ -28,6 +28,12 @@ class App extends Component{
               type="text"
               placeholder="Type your question here..."
             />
+
+            <button
+              class="text"
+              type="text"
+            >Add</button>
+
           </div>
 
           <div class="sub_column"></div>
