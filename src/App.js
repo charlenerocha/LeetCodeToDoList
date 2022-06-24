@@ -25,14 +25,38 @@ class App extends Component{
 
   render(){
     return(
-      <div className="App">
-        <div className='Title'>
+      <div class="app">
+        <div class='title'>
           <h1>LeetCode To-Do List</h1>
         </div>
         
         <div class="row">
           <div class="main_column">
             <h3>Which question do you want to do?</h3>
+<<<<<<< HEAD
+=======
+              
+            <input
+              class="text"
+              type="text"
+              size="30"
+              placeholder="Type your question here..."
+            />
+
+            <button
+              class="text"
+              type="text"
+              onclick="myFunction()"
+            >Add..</button>
+
+            {/* <script>
+            document.getElementById("text").onclick = function() {myFunction()};
+
+            function myFunction() {
+              document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+            }
+            </script> */}
+>>>>>>> 3bd6c06db1b2e5dabea74fde1e24e55abd870d0b
 
             <form onSubmit={this.handleSubmit}>
               <input class="text" type="text" id="test" placeholder="Type your question here..." value={this.state.value} onChange={this.handleChange} />
