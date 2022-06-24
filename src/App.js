@@ -37,9 +37,9 @@ class App extends Component{
           </div>
 
           <div class="sub_column"></div>
-
+{/* test */}
         </div>
-      </div>
+      </div>  
     )
   }
 }
