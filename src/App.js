@@ -7,9 +7,20 @@ class App extends Component{
     super(props);
 
     this.state={
-      newItem:"",
-      list:[]
+      value: '',
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
   }
 
   render(){
@@ -22,32 +33,22 @@ class App extends Component{
         <div class="row">
           <div class="main_column">
             <h3>Which question do you want to do?</h3>
-              
-            <input
-              class="text"
-              type="text"
-              value="question"
-              placeholder="Type your question here..."
-            />
 
-            <button
-              class="text"
-              type="text"
-              onclick="myFunction()"
-            >Add..</button>
+            <form onSubmit={this.handleSubmit}>
+              <input class="text" type="text" id="test" placeholder="Type your question here..." value={this.state.value} onChange={this.handleChange} />
+              <input class="text" type="submit" value="Add" />
+            </form>
 
-            {/* <script>
-            document.getElementById("text").onclick = function() {myFunction()};
+            <br>
+            </br>
 
-            function myFunction() {
-              document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-            }
-            </script> */}
-
+            <div>
+              I was gonna figure out how to print the state here
+            </div>
           </div>
 
           <div class="sub_column"></div>
-{/* test */}
+
         </div>
       </div>  
     )

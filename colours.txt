@@ -1,24 +1,25 @@
-/* Coolors Exported Palette - https://coolors.co/fff9ef-ffb080-9e7682-3c3a42 */
+/* Coolors Exported Palette - https://coolors.co/fffefc-fff4cb-f88640-8a5d6a-3c3a42 */
 
 /* CSV */
-fff9ef,ffb080,9e7682,3c3a42
+fffefc,fff4cb,f88640,8a5d6a,3c3a42
 
 /* With # */
-#fff9ef, #ffb080, #9e7682, #3c3a42
+#fffefc, #fff4cb, #f88640, #8a5d6a, #3c3a42
 
 /* Array */
-["fff9ef","ffb080","9e7682","3c3a42"]
+["fffefc","fff4cb","f88640","8a5d6a","3c3a42"]
 
 /* Object */
-{"Floral White":"fff9ef","Macaroni And Cheese":"ffb080","Mountbatten Pink":"9e7682","Jet":"3c3a42"}
+{"White":"fffefc","Lemon Meringue":"fff4cb","Mango Tango":"f88640","Mauve Taupe":"8a5d6a","Jet":"3c3a42"}
 
 /* Extended Array */
-[{"name":"Floral White","hex":"fff9ef","rgb":[255,249,239],"cmyk":[0,2,6,0],"hsb":[37,6,100],"hsl":[37,100,97],"lab":[98,0,5]},{"name":"Macaroni And Cheese","hex":"ffb080","rgb":[255,176,128],"cmyk":[0,31,50,0],"hsb":[23,50,100],"hsl":[23,100,75],"lab":[78,24,36]},{"name":"Mountbatten Pink","hex":"9e7682","rgb":[158,118,130],"cmyk":[0,25,18,38],"hsb":[342,25,62],"hsl":[342,17,54],"lab":[54,18,0]},{"name":"Jet","hex":"3c3a42","rgb":[60,58,66],"cmyk":[9,12,0,74],"hsb":[255,12,26],"hsl":[255,6,24],"lab":[25,3,-5]}]
+[{"name":"White","hex":"fffefc","rgb":[255,254,252],"cmyk":[0,0,1,0],"hsb":[40,1,100],"hsl":[40,100,99],"lab":[100,0,1]},{"name":"Lemon Meringue","hex":"fff4cb","rgb":[255,244,203],"cmyk":[0,4,20,0],"hsb":[47,20,100],"hsl":[47,100,90],"lab":[96,-3,21]},{"name":"Mango Tango","hex":"f88640","rgb":[248,134,64],"cmyk":[0,46,74,3],"hsb":[23,74,97],"hsl":[23,93,61],"lab":[68,38,55]},{"name":"Mauve Taupe","hex":"8a5d6a","rgb":[138,93,106],"cmyk":[0,33,23,46],"hsb":[343,33,54],"hsl":[343,19,45],"lab":[45,20,0]},{"name":"Jet","hex":"3c3a42","rgb":[60,58,66],"cmyk":[9,12,0,74],"hsb":[255,12,26],"hsl":[255,6,24],"lab":[25,3,-5]}]
 
 /* XML */
 <palette>
-  <color name="Floral White" hex="fff9ef" r="255" g="249" b="239" />
-  <color name="Macaroni And Cheese" hex="ffb080" r="255" g="176" b="128" />
-  <color name="Mountbatten Pink" hex="9e7682" r="158" g="118" b="130" />
+  <color name="White" hex="fffefc" r="255" g="254" b="252" />
+  <color name="Lemon Meringue" hex="fff4cb" r="255" g="244" b="203" />
+  <color name="Mango Tango" hex="f88640" r="248" g="134" b="64" />
+  <color name="Mauve Taupe" hex="8a5d6a" r="138" g="93" b="106" />
   <color name="Jet" hex="3c3a42" r="60" g="58" b="66" />
 </palette>
