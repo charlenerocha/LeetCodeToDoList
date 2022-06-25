@@ -86,6 +86,14 @@ ul {
   font-size: 2vw;
 }
 
+li:nth-child(1) > .up-button {
+  visibility: hidden;
+}
+
+li:nth-last-child(1) > .down-button {
+  visibility: hidden;
+}
+
 li:nth-child(odd) {
   background-color: #FFF4CB;
 }

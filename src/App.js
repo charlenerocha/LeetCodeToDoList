@@ -39,9 +39,29 @@ class App extends Component{
     });
   }
 
+  handleUp(index, event) {
+    let tmp = this.state.list[index.index]
+    this.state.list[index.index] = this.state.list[index.index - 1]
+    this.state.list[index.index - 1] = tmp
+    this.setState({
+      list: this.state.list,
+      value: this.state.value
+    });
+  }
+
+  handleDown(index, event) {
+    let tmp = this.state.list[index.index + 1]
+    this.state.list[index.index + 1] = this.state.list[index.index]
+    this.state.list[index.index] = tmp
+    this.setState({
+      list: this.state.list,
+      value: this.state.value
+    });
+  }
+
   render(){
     const listElements = this.state.list.map((element, index) =>
-      <li id={index}>{element}<button onClick={(e) => this.handleDelete({index}, e)} class="list-button">Delete</button><button class="list-button">Down</button><button class="list-button">Up</button></li>
+      <li id={index}>{element}<button onClick={(e) => this.handleDelete({index}, e)} class="list-button"><i class="fa-solid fa-trash"></i></button><button onClick={(e) => this.handleDown({index}, e)} class="list-button down-button"><i class="fa-solid fa-angle-down"></i></button><button onClick={(e) => this.handleUp({index}, e)} class="list-button up-button"><i class="fa-solid fa-angle-up"></i></button></li>
     );
 
     return(
