@@ -13,6 +13,7 @@ class App extends Component{
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleChange(event) {
@@ -30,9 +31,17 @@ class App extends Component{
     event.preventDefault();
   }
 
+  handleDelete(index, event) {
+    this.state.list.splice(index.index, 1)
+    this.setState({
+      list: this.state.list,
+      value: this.state.value
+    });
+  }
+
   render(){
-    const listElements = this.state.list.map((element) =>
-      <li>{element}</li>
+    const listElements = this.state.list.map((element, index) =>
+      <li id={index}>{element}<button onClick={(e) => this.handleDelete({index}, e)} class="list-button">Delete</button><button class="list-button">Down</button><button class="list-button">Up</button></li>
     );
 
     return(
@@ -50,8 +59,7 @@ class App extends Component{
               <input class="button" type="submit" value="Add" />
             </form>
 
-            <br>
-            </br>
+            <br />
 
             <div>
               <ul class="todo_elements" >{listElements}</ul>

@@ -79,3 +79,22 @@ h4  {
   border-radius: 25px;
   padding: 1vw 0 1vw 1vw;
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 2vw;
+}
+
+li:nth-child(odd) {
+  background-color: #FFF4CB;
+}
+
+li:nth-child(even) {
+  background-color: #FFFEFC;
+}
+
+.list-button {
+  float: right;
+  margin: auto 0 auto 1vw;
+}
