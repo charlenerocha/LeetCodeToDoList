@@ -14,6 +14,7 @@ class App extends Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleChange(event) {
@@ -61,9 +62,28 @@ class App extends Component{
     });
   }
 
+  handleEdit(event) {
+    this.state.list[event.target.parentNode.id] = event.target.value
+    this.setState({
+      value: this.state.value,
+      list: this.state.list
+    });
+  }
+
   render(){
     const listElements = this.state.list.map((element, index) =>
-      <li id={index}>{element}<button onClick={(e) => this.handleDelete({index}, e)} class="list-button"><i class="fa-solid fa-trash"></i></button><button onClick={(e) => this.handleDown({index}, e)} class="list-button down-button"><i class="fa-solid fa-angle-down"></i></button><button onClick={(e) => this.handleUp({index}, e)} class="list-button up-button"><i class="fa-solid fa-angle-up"></i></button></li>
+      <li id={index}>
+        <textarea class="list-label" rows="1" onChange={this.handleEdit} value={element}></textarea>
+        <button onClick={(e) => this.handleDelete({index}, e)} class="list-button">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+        <button onClick={(e) => this.handleDown({index}, e)} class="list-button down-button">
+          <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <button onClick={(e) => this.handleUp({index}, e)} class="list-button up-button">
+          <i class="fa-solid fa-angle-up"></i>
+        </button>
+      </li>
     );
 
     return(
@@ -84,7 +104,7 @@ class App extends Component{
             <br />
 
             <div>
-              <ul class="todo_elements" >{listElements}</ul>
+              <ol class="todo_elements" >{listElements}</ol>
             </div>
           </div>
 

@@ -80,10 +80,13 @@ h4  {
   padding: 1vw 0 1vw 1vw;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
+ol {
+  list-style-type: upper-roman;
   font-size: 2vw;
+}
+
+li:hover {
+  list-style-type: "✏️";
 }
 
 li:nth-child(1) > .up-button {
@@ -113,4 +116,16 @@ li:nth-child(even) {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+
+.list-label {
+  background: none;
+  border: none;
+  resize: none;
+  font-size: 2vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  padding: 0;
+  margin: 0;
 }
