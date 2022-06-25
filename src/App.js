@@ -24,10 +24,12 @@ class App extends Component{
   }
 
   handleSubmit(event) {
-    this.setState({
-      list: this.state.list.concat(this.state.value),
-      value: ""
-    });
+    if (this.state.value != "") {
+      this.setState({
+        list: this.state.list.concat(this.state.value),
+        value: ""
+      });
+    }
     event.preventDefault();
   }
 
