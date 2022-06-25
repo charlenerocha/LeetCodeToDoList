@@ -105,4 +105,12 @@ li:nth-child(even) {
 .list-button {
   float: right;
   margin: auto 0 auto 1vw;
+  font-size: 2vw;
+  color: #8A5D6A;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
