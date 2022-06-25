@@ -54,11 +54,16 @@ class App extends Component{
             </br>
 
             <div>
-              <ul>{listElements}</ul>
+              <ul class="todo_elements" >{listElements}</ul>
             </div>
           </div>
 
-          <div class="sub_column"></div>
+          <div class="sub_column">
+            <div class="sub_column_fill">
+              <h4>Try it out!</h4>
+              {/* Add the API stuff in here */}
+            </div>
+          </div>
 
         </div>
       </div>  
