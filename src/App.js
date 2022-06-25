@@ -8,6 +8,7 @@ class App extends Component{
 
     this.state={
       value: '',
+      list: []
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,15 +16,25 @@ class App extends Component{
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({
+      value: event.target.value,
+      list: this.state.list
+    });
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    this.setState({
+      list: this.state.list.concat(this.state.value),
+      value: ""
+    });
     event.preventDefault();
   }
 
   render(){
+    const listElements = this.state.list.map((element) =>
+      <li>{element}</li>
+    );
+
     return(
       <div class="app">
         <div class='title'>
@@ -35,15 +46,15 @@ class App extends Component{
             <h3>Which question do you want to do?</h3>
 
             <form onSubmit={this.handleSubmit}>
-              <input class="text" type="text" id="test" placeholder="Type your question here..." value={this.state.value} onChange={this.handleChange} />
-              <input class="text" type="submit" value="Add" />
+              <input class="textbox" type="text" id="test" placeholder="Type your question here..." size="30" value={this.state.value} onChange={this.handleChange} />
+              <input class="button" type="submit" value="Add" />
             </form>
 
             <br>
             </br>
 
             <div>
-              I was gonna figure out how to print the state here
+              <ul>{listElements}</ul>
             </div>
           </div>
 
